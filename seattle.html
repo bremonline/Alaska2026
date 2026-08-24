@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter One: The Land of Coffee and Glass</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Fondamento:ital@0;1&family=Della+Respira&family=Cinzel:wght@400;600&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #f5efe0;
+    color: #2a1f0e;
+    font-family: 'Della Respira', Georgia, serif;
+    font-size: 19px;
+    line-height: 1.95;
+  }
+
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 60px 30px;
+  }
+
+  h1 {
+    font-family: 'Parisienne', cursive;
+    font-size: 3.2em;
+    font-weight: 400;
+    color: #7a3a00;
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: 0.02em;
+    text-shadow: 0 2px 8px rgba(120,60,0,0.2);
+  }
+
+  .chapter-label {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    color: #9a6a20;
+    font-size: 0.95em;
+    margin-bottom: 50px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .divider {
+    text-align: center;
+    color: #9a6a20;
+    font-size: 1.4em;
+    margin: 40px 0;
+    letter-spacing: 0.4em;
+  }
+
+  p {
+    margin-bottom: 1.4em;
+    color: #2a1f0e;
+  }
+
+  .photo-float-left {
+    float: left;
+    margin: 0 28px 20px 0;
+    width: 320px;
+  }
+  .photo-float-left a { display: block; }
+  .photo-float-left img {
+    width: 100%;
+    border: 3px solid #c8a878;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+    display: block;
+    transition: opacity 0.2s;
+  }
+  .photo-float-left img:hover { opacity: 0.88; }
+
+  /* Float right — text wraps around image */
+  .photo-float-right {
+    float: right;
+    margin: 0 0 20px 28px;
+    width: 320px;
+  }
+  .photo-float-right a { display: block; }
+  .photo-float-right img {
+    width: 100%;
+    border: 3px solid #c8a878;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+    display: block;
+    transition: opacity 0.2s;
+  }
+  .photo-float-right img:hover { opacity: 0.88; }
+  .clearfix::after { content: ''; display: table; clear: both; }
+
+  /* Single photo */
+  .photo-single {
+    margin: 32px 0;
+    text-align: center;
+  }
+
+  .photo-single a {
+    display: inline-block;
+  }
+
+  .photo-single img {
+    max-width: 100%;
+    width: 720px;
+    border: 3px solid #c8a878;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    display: block;
+    transition: opacity 0.2s;
+  }
+
+  .photo-single img:hover { opacity: 0.88; }
+
+  .caption {
+    font-size: 0.82em;
+    font-style: italic;
+    font-family: 'Fondamento', serif;
+    color: #7a6040;
+    margin-top: 8px;
+  }
+
+  /* Photo row — 2 or 3 across */
+  .photo-row {
+    display: flex;
+    gap: 10px;
+    margin: 32px 0;
+    justify-content: center;
+  }
+
+  .photo-row a {
+    flex: 1;
+    min-width: 0;
+    display: block;
+  }
+
+  .photo-row img {
+    width: 100%;
+    border: 2px solid #c8a878;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    display: block;
+    transition: opacity 0.2s;
+  }
+
+  .photo-row img:hover { opacity: 0.88; }
+
+  /* Gallery link */
+  .gallery-link {
+    display: inline-block;
+    margin: 10px 0 32px 0;
+    padding: 8px 20px;
+    border: 1px solid #9a6a20;
+    color: #7a3a00;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-style: italic;
+    font-size: 0.95em;
+    transition: background 0.2s;
+  }
+  .gallery-link:hover { background: rgba(154,106,32,0.1); }
+
+  .pullquote {
+    border-left: 3px solid #9a6a20;
+    padding: 10px 24px;
+    margin: 32px 0;
+    font-family: 'Fondamento', serif;
+    font-style: italic;
+    font-size: 1.25em;
+    color: #7a3a00;
+  }
+
+  .chapter-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid #c8a878;
+    font-family: 'Cinzel', serif;
+    font-style: italic;
+  }
+  .chapter-nav a { color: #7a3a00; text-decoration: none; }
+  .chapter-nav a:hover { text-decoration: underline; }
+
+  .table-pair {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .table-pair-item {
+    flex: 1;
+    min-width: 0;
+    max-width: 320px;
+  }
+  .table-crop {
+    overflow: hidden;
+    height: 260px;
+    width: 100%;
+    border: 2px solid #c8a878;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  }
+  .table-crop img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  @media (max-width: 600px) {
+    .table-pair { flex-direction: column; }
+    .table-pair-item { max-width: 100%; }
+    .photo-float-left, .photo-float-right { float: none; width: 100% !important; margin: 0 0 20px 0; }
+  }
+
+
+  @media (max-width: 600px) {
+    .chapter-nav, .footer-nav { flex-direction: column; align-items: center; gap: 12px; text-align: center; }
+  }
+</style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6EHHPGDR1N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6EHHPGDR1N');
+  </script>
+</head>
+<body>
+<div class="page">
+
+  <div class="chapter-label">Chapter One</div>
+  <h1>The Land of Coffee and Glass</h1>
+  <div class="divider">✦ ✦ ✦</div>
+
+  <div class="clearfix">
+    <div class="photo-float-right">
+      <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/MountRainier.jpeg" target="_blank">
+        <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/MountRainier.jpeg" alt="Mount Rainier from the plane">
+      </a>
+      <div class="caption">Mount Rainier, as seen from the magic carpet</div>
+    </div>
+
+  <p>Every great adventure must begin somewhere, and for Prince and Snow Charming, this one began not in Alaska, but in the far away land of Seattle — a mystical city of coffee, art, and endless grey skies. To reach it, they boarded a magic carpet in the sky, and even before the adventure had truly begun, the kingdom announced itself in spectacular fashion.</p>
+
+  <p>As the carpet soared above the clouds, the great Mountain of Rainier appeared below them — ancient, snow-capped, impossibly majestic — as if the land itself was saying <em>welcome</em>.</p>
+
+  <div class="clearfix">
+    <div class="photo-float-left">
+      <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/PikesMarket.jpeg" target="_blank">
+        <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/PikesMarket.jpeg" alt="Pike's Market">
+      </a>
+      <div class="caption">The haunted marketplace of Pike's Market</div>
+    </div>
+
+  <p>Upon landing, the Charmings dove headfirst into the legendary haunted marketplace known as Pike's Market — a labyrinth of fish mongers, flower stalls, and wandering souls. The Prince and Snow found themselves gloriously lost within it, carried along by the crowd like leaves in a stream. Vendors called out from every direction, the smell of fresh flowers and salt air mingled together, and somewhere in the chaos a man threw a whole salmon through the air to thunderous applause. It was magnificent and overwhelming in equal measure.</p>
+
+  </div>
+
+  <div class="clearfix">
+    <div class="photo-float-right">
+      <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Zoltar.jpeg" target="_blank">
+        <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Zoltar.jpeg" alt="Zoltar the Wise">
+      </a>
+      <div class="caption">Zoltar the Wise — dispenser of destinies</div>
+    </div>
+
+  <p>It was Snow who found salvation — a great mechanical wizard named Zoltar, who in exchange for a single gold coin, offered his ancient wisdom and pointed the way to the exit. The wizard's eyes glowed with ancient knowing, and his prophecy, whatever it may have been, seemed to please Snow greatly. Prince Charming was perhaps a little jealous of the wizard, but wisely kept that to himself.</p>
+  </div>
+
+  <div class="divider">✦</div>
+
+  <div class="clearfix">
+    <div class="photo-float-right">
+      <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/SpaceNeedle.jpeg" target="_blank">
+        <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/SpaceNeedle.jpeg" alt="The Space Needle">
+      </a>
+      <div class="caption">The great tower of the Space Needle</div>
+    </div>
+
+  <p>The following day, the Charmings rode the Magic Monorail across the city to visit the great tower known as the Space Needle. They ascended to the very top of the world, where the views stretched endlessly — mountains, water, and city all laid out below them like a storybook map. And there, at the edge of the sky, stood the Prince and Snow themselves.</p>
+  </div>
+
+  <div class="photo-row">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/SpaceNeedleView1.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/SpaceNeedleView1.jpeg" alt="View from the Space Needle">
+    </a>
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/SpaceNeedleView2.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/SpaceNeedleView2.jpeg" alt="View from the Space Needle">
+    </a>
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/SpaceNeedleView3.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/SpaceNeedleView3.jpeg" alt="View from the Space Needle">
+    </a>
+  </div>
+  <div style="text-align:center" class="caption" style="margin-top:-20px">The kingdom of Seattle, spread out below</div>
+
+  <div class="photo-single">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/SpaceNeedleViewWithUs.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/SpaceNeedleViewWithUs.jpeg" alt="Prince and Snow at the top of the world">
+    </a>
+    <div class="caption">Prince and Snow, at the top of the world</div>
+  </div>
+
+  <div class="divider">✦</div>
+
+  <p>But the tower was only the beginning. Next door lay a place of pure enchantment — the Garden of Glass, created by the great sorcerer Chihuly, who had spent a lifetime bending light and molten sand into impossible shapes and colors. Prince and Snow wandered through it in near silence, heads tilted back, mouths open.</p>
+
+  <div class="pullquote">
+    "There are no words for what the sorcerer had built here. Only color, and light, and wonder."
+  </div>
+
+  <div class="photo-row">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly1.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly1.jpeg" alt="Chihuly Garden of Glass">
+    </a>
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly2.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly2.jpeg" alt="Chihuly Garden of Glass">
+    </a>
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly3.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly3.jpeg" alt="Chihuly Garden of Glass">
+    </a>
+  </div>
+
+  <div style="text-align:center">
+    <a class="gallery-link" href="gallery-chihuly.html">✦ See the full Chihuly gallery — all 27 images ✦</a>
+  </div>
+
+  <div class="divider">✦</div>
+
+  <div class="clearfix">
+    <div class="photo-float-right">
+      <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Cards.jpeg" target="_blank">
+        <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Cards.jpeg" alt="Snow plays cards with herself" style="width:100%; border: 2px solid #c8a878; box-shadow: 0 4px 14px rgba(0,0,0,0.15);">
+      </a>
+      <div class="caption" style="text-align:center">Her own most formidable opponent</div>
+    </div>
+    <p>And yet the day was not finished. The Charmings ventured next into the Land of Illusions, where reality itself could not be trusted. Snow sat down for a quiet game of cards — and found herself playing against herself. Six Snows at the table, all equally determined, all equally convinced they would win. It was, by all accounts, the most evenly matched game in history.</p>
+  </div>
+
+  <div class="clearfix">
+    <div class="photo-float-right">
+      <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Metro.jpeg" target="_blank">
+        <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Metro.jpeg" alt="Snow defies gravity" style="width:100%; border: 2px solid #c8a878; box-shadow: 0 4px 14px rgba(0,0,0,0.15);">
+      </a>
+      <div class="caption" style="text-align:center">Defying the very laws of nature</div>
+    </div>
+    <p>And in the most remarkable moment of all, Snow defied gravity entirely — standing upside down, perfectly calm, as if this were the most natural thing in the world. The Prince watched with wide eyes, quietly wondering if Snow had always had this power and had simply never mentioned it. He decided it was wisest not to ask.</p>
+  </div>
+
+  <div style="display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-bottom:8px;">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/IllusionTable1.jpeg" target="_blank" style="width:320px; flex-shrink:0;">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/IllusionTable1.jpeg" alt="The illusion tables" style="width:100%; border:3px solid #c8a878; box-shadow:0 6px 24px rgba(0,0,0,0.2);">
+    </a>
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/IllusionTable2.jpeg" target="_blank" style="width:320px; flex-shrink:0;">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/IllusionTable2.jpeg" alt="The illusion tables" style="width:100%; border:3px solid #c8a878; box-shadow:0 6px 24px rgba(0,0,0,0.2);">
+    </a>
+  </div>
+  <div class="caption" style="text-align:center; margin-bottom:20px;">Where nothing was quite what it seemed</div>
+
+  <p>She examined curious tables where nothing was as it seemed — surfaces that bent the eye, perspectives that made the mind doubt itself. The Prince tried to keep up, but the Land of Illusions was clearly Snow's domain.</p>
+
+  <div class="divider">✦ ✦ ✦</div>
+
+  <p>And so ended the first chapter of the Charmings' grand adventure. Seattle had been everything it promised — magical, surprising, and full of wonder. But the next kingdom awaited, and with it, a train that would carry them north across the border into the great city of Vancouver — and the sea beyond.</p>
+
+  <div class="chapter-nav">
+    <a href="prelude.html">← Prelude</a>
+    <a href="index.html">↑ All Chapters</a>
+    <a href="vancouver.html">Vancouver →</a>
+  </div>
+
+</div>
+</body>
+</html>

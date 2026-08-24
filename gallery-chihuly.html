@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Garden of Glass — Chihuly Gallery</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Fondamento:ital@0;1&family=Della+Respira&family=Cinzel:wght@400;600&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #f5efe0;
+    color: #2a1f0e;
+    font-family: 'Della Respira', Georgia, serif;
+  }
+
+  .header {
+    text-align: center;
+    padding: 50px 20px 30px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .chapter-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #9a6a20;
+    margin-bottom: 12px;
+  }
+
+  h1 {
+    font-family: 'Parisienne', cursive;
+    font-size: 3em;
+    color: #7a3a00;
+    margin-bottom: 14px;
+  }
+
+  .intro {
+    font-size: 1em;
+    line-height: 1.8;
+    color: #4a3a20;
+    max-width: 620px;
+    margin: 0 auto 10px;
+    font-style: italic;
+  }
+
+  .divider {
+    text-align: center;
+    color: #9a6a20;
+    font-size: 1.4em;
+    margin: 20px 0 36px;
+    letter-spacing: 0.4em;
+  }
+
+  /* Row-based grid — fills left to right */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+  }
+
+  .gallery-item {
+    min-width: 0;
+  }
+
+  .gallery-item a {
+    display: block;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    display: block;
+    border: 2px solid #c8a878;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  .gallery-item img:hover {
+    opacity: 0.9;
+    transform: scale(1.01);
+  }
+
+  /* Full-width panoramic item */
+  .gallery-item.wide {
+    grid-column: 1 / -1;
+  }
+
+  .back-link {
+    display: block;
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.9em;
+    color: #7a3a00;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+  }
+  .back-link:hover { text-decoration: underline; }
+
+  @media (max-width: 768px) {
+    .gallery { grid-template-columns: repeat(2, 1fr); }
+    h1 { font-size: 2em; }
+  }
+  @media (max-width: 600px) {
+    .gallery { grid-template-columns: 1fr; }
+    .gallery-item.full-width { grid-column: span 1; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="chapter-label">Seattle · The Garden of Glass</div>
+  <h1>The Sorcerer Chihuly</h1>
+  <p class="intro">There are no words for what the sorcerer had built here. Only color, and light, and wonder. Prince and Snow wandered through it in near silence, heads tilted back, mouths open.</p>
+  <div class="divider">✦ ✦ ✦</div>
+</div>
+
+<div class="gallery">
+
+  <div class="gallery-item">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly1.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly1.jpeg" alt="Chihuly 1">
+    </a>
+  </div>
+  <div class="gallery-item">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly2.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly2.jpeg" alt="Chihuly 2">
+    </a>
+  </div>
+  <div class="gallery-item">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly3.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly3.jpeg" alt="Chihuly 3">
+    </a>
+  </div>
+  <div class="gallery-item">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly4.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly4.jpeg" alt="Chihuly 4">
+    </a>
+  </div>
+  <div class="gallery-item">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly5.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly5.jpeg" alt="Chihuly 5">
+    </a>
+  </div>
+  <div class="gallery-item">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly6.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly6.jpeg" alt="Chihuly 6">
+    </a>
+  </div>
+  <div class="gallery-item">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly7.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly7.jpeg" alt="Chihuly 7">
+    </a>
+  </div>
+  <div class="gallery-item">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly8.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly8.jpeg" alt="Chihuly 8">
+    </a>
+  </div>
+  <div class="gallery-item">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly9.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly9.jpeg" alt="Chihuly 9">
+    </a>
+  </div>
+  <div class="gallery-item">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly10.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly10.jpeg" alt="Chihuly 10">
+    </a>
+  </div>
+  <div class="gallery-item">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly11.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly11.jpeg" alt="Chihuly 11">
+    </a>
+  </div>
+  <div class="gallery-item">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly12.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly12.jpeg" alt="Chihuly 12">
+    </a>
+  </div>
+  <div class="gallery-item">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly13.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly13.jpeg" alt="Chihuly 13">
+    </a>
+  </div>
+  <div class="gallery-item">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly14.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly14.jpeg" alt="Chihuly 14">
+    </a>
+  </div>
+  <div class="gallery-item">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly15.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly15.jpeg" alt="Chihuly 15">
+    </a>
+  </div>
+  <div class="gallery-item">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly16.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly16.jpeg" alt="Chihuly 16">
+    </a>
+  </div>
+  <div class="gallery-item">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly17.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly17.jpeg" alt="Chihuly 17">
+    </a>
+  </div>
+  <div class="gallery-item">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly18.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly18.jpeg" alt="Chihuly 18">
+    </a>
+  </div>
+  <div class="gallery-item">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly19.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly19.jpeg" alt="Chihuly 19">
+    </a>
+  </div>
+  <div class="gallery-item">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly20.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly20.jpeg" alt="Chihuly 20">
+    </a>
+  </div>
+  <div class="gallery-item">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly21.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly21.jpeg" alt="Chihuly 21">
+    </a>
+  </div>
+  <div class="gallery-item">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly22.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly22.jpeg" alt="Chihuly 22">
+    </a>
+  </div>
+  <div class="gallery-item">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly23.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly23.jpeg" alt="Chihuly 23">
+    </a>
+  </div>
+  <div class="gallery-item">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly24.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly24.jpeg" alt="Chihuly 24">
+    </a>
+  </div>
+  <div class="gallery-item">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly25.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly25.jpeg" alt="Chihuly 25">
+    </a>
+  </div>
+  <div class="gallery-item">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly26.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly26.jpeg" alt="Chihuly 26">
+    </a>
+  </div>
+  <div class="gallery-item">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly27.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/Chihuly27.jpeg" alt="Chihuly 27">
+    </a>
+  </div>
+
+  <!-- Panoramic long shot spans full width -->
+  <div class="gallery-item wide">
+    <a href="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/ChihulyLong.jpeg" target="_blank">
+      <img src="https://raw.githubusercontent.com/bremonline/Alaska2026/main/images/seattle/ChihulyLong.jpeg" alt="Chihuly panoramic">
+    </a>
+  </div>
+
+</div>
+
+<a class="back-link" href="seattle.html">← Return to Chapter One: The Land of Coffee and Glass</a>
+
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guestbook — Life After Happily Ever After</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Cinzel:wght@400;600&family=Della+Respira&family=Fondamento&display=swap" rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6EHHPGDR1N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6EHHPGDR1N');
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: #f5efe0;
+      color: #2a1f0e;
+      font-family: 'Della Respira', Georgia, serif;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      padding: 0 1rem 4rem;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 1.5rem;
+      border-bottom: 2px solid #9a6a20;
+      margin-bottom: 2.5rem;
+    }
+
+    .chapter-label {
+      font-family: 'Cinzel', serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.2em;
+      color: #7a3a00;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-family: 'Parisienne', cursive;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      color: #7a3a00;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-family: 'Fondamento', cursive;
+      font-size: 0.95rem;
+      color: #7a3a00;
+      margin-top: 0.8rem;
+    }
+
+    .content {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    p { margin-bottom: 1.4rem; }
+
+    /* Form */
+    .sign-form {
+      background: #fff8ee;
+      border: 1px solid #c8a060;
+      border-radius: 8px;
+      padding: 1.8rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .sign-form h2 {
+      font-family: 'Parisienne', cursive;
+      font-size: 1.8rem;
+      color: #7a3a00;
+      margin-bottom: 1rem;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.8rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 200px;
+    }
+
+    label {
+      font-family: 'Cinzel', serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      color: #7a3a00;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+
+    input, textarea {
+      font-family: 'Della Respira', Georgia, serif;
+      font-size: 1rem;
+      color: #2a1f0e;
+      background: #fffdf7;
+      border: 1px solid #c8a060;
+      border-radius: 4px;
+      padding: 0.5rem 0.7rem;
+      width: 100%;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #7a3a00;
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+      margin-bottom: 0.8rem;
+    }
+
+    .btn-sign {
+      font-family: 'Cinzel', serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+      color: #f5efe0;
+      background: #7a3a00;
+      border: none;
+      border-radius: 4px;
+      padding: 0.6rem 1.8rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn-sign:hover { background: #5a2a00; }
+    .btn-sign:disabled { background: #b08050; cursor: not-allowed; }
+
+    .form-status {
+      font-family: 'Fondamento', cursive;
+      font-size: 0.9rem;
+      color: #7a3a00;
+      margin-top: 0.7rem;
+      min-height: 1.4rem;
+    }
+
+    /* Entries */
+    .entries-title {
+      font-family: 'Parisienne', cursive;
+      font-size: 1.8rem;
+      color: #7a3a00;
+      margin-bottom: 1.2rem;
+    }
+
+    .entry {
+      border-top: 1px solid #c8a060;
+      padding: 1.2rem 0;
+    }
+
+    .entry:last-child { border-bottom: 1px solid #c8a060; }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .entry-name {
+      font-family: 'Cinzel', serif;
+      font-size: 1rem;
+      color: #7a3a00;
+      font-weight: 600;
+    }
+
+    .entry-date {
+      font-family: 'Fondamento', cursive;
+      font-size: 0.8rem;
+      color: #9a6a20;
+    }
+
+    .entry-location {
+      font-family: 'Fondamento', cursive;
+      font-size: 0.85rem;
+      color: #9a6a20;
+      margin-bottom: 0.3rem;
+    }
+
+    .entry-message {
+      font-family: 'Della Respira', Georgia, serif;
+      font-size: 1rem;
+      color: #2a1f0e;
+      line-height: 1.7;
+    }
+
+    .no-entries {
+      font-family: 'Fondamento', cursive;
+      color: #9a6a20;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    .loading {
+      font-family: 'Fondamento', cursive;
+      color: #9a6a20;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #9a6a20;
+      margin: 2.5rem auto;
+      width: 60%;
+      opacity: 0.5;
+    }
+
+    .footer-nav {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid #9a6a20;
+      font-family: 'Cinzel', serif;
+      font-size: 0.9rem;
+    }
+    .footer-nav a {
+      color: #7a3a00;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+    .footer-nav a:hover { text-decoration: underline; }
+  
+  @media (max-width: 600px) {
+    .chapter-nav, .footer-nav { flex-direction: column; align-items: center; gap: 12px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="chapter-label">Alaska 2026</div>
+  <h1>Sign the Guestbook</h1>
+  <p class="subtitle">Leave a note for Prince &amp; Snow Charming</p>
+</header>
+
+<div class="content">
+
+  <p>
+    Thank you for sharing in our adventure. If you'd like to leave a word — a memory, a wish, a note for the road ahead — we'd love to hear from you.
+  </p>
+
+  <div class="sign-form">
+    <h2>Leave Your Mark</h2>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="gb-name">Your Name *</label>
+        <input type="text" id="gb-name" placeholder="Your name" maxlength="80">
+      </div>
+      <div class="form-group">
+        <label for="gb-location">Where You're From</label>
+        <input type="text" id="gb-location" placeholder="City, State" maxlength="80">
+      </div>
+    </div>
+    <label for="gb-message">Your Message *</label>
+    <textarea id="gb-message" placeholder="Leave a note…" maxlength="1000"></textarea>
+    <div>
+      <button class="btn-sign" id="gb-submit">Sign the Guestbook</button>
+    </div>
+    <div class="form-status" id="gb-status"></div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="entries-title">What Others Have Written</div>
+  <div id="gb-entries"><div class="loading">Loading entries…</div></div>
+
+</div><!-- .content -->
+
+<div class="content">
+  <nav class="footer-nav">
+    <a href="index.html">↑ All Chapters</a>
+  </nav>
+</div>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js";
+  import { getFirestore, collection, addDoc, getDocs, orderBy, query, serverTimestamp }
+    from "https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBvkbJ64XwMqP4BCTPZ2l45ce9WFOpppjo",
+    authDomain: "alaska2026journal.firebaseapp.com",
+    projectId: "alaska2026journal",
+    storageBucket: "alaska2026journal.firebasestorage.app",
+    messagingSenderId: "1083061435595",
+    appId: "1:1083061435595:web:b67cc7f0486ce92ec96f4e"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  // Load entries
+  async function loadEntries() {
+    const container = document.getElementById('gb-entries');
+    try {
+      const q = query(collection(db, 'guestbook'), orderBy('timestamp', 'desc'));
+      const snapshot = await getDocs(q);
+      if (snapshot.empty) {
+        container.innerHTML = '<div class="no-entries">No entries yet — be the first to sign!</div>';
+        return;
+      }
+      container.innerHTML = snapshot.docs.map(doc => {
+        const d = doc.data();
+        const date = d.timestamp ? new Date(d.timestamp.toDate()).toLocaleDateString('en-US', {
+          year: 'numeric', month: 'long', day: 'numeric'
+        }) : '';
+        return `
+          <div class="entry">
+            <div class="entry-header">
+              <span class="entry-name">${escapeHtml(d.name)}</span>
+              <span class="entry-date">${date}</span>
+            </div>
+            ${d.location ? `<div class="entry-location">📍 ${escapeHtml(d.location)}</div>` : ''}
+            <div class="entry-message">${escapeHtml(d.message)}</div>
+          </div>`;
+      }).join('');
+    } catch (e) {
+      container.innerHTML = '<div class="no-entries">Unable to load entries. Please try again later.</div>';
+    }
+  }
+
+  // Submit entry
+  document.getElementById('gb-submit').addEventListener('click', async () => {
+    const name = document.getElementById('gb-name').value.trim();
+    const location = document.getElementById('gb-location').value.trim();
+    const message = document.getElementById('gb-message').value.trim();
+    const status = document.getElementById('gb-status');
+    const btn = document.getElementById('gb-submit');
+
+    if (!name) { status.textContent = 'Please enter your name.'; return; }
+    if (!message) { status.textContent = 'Please write a message.'; return; }
+
+    btn.disabled = true;
+    status.textContent = 'Signing…';
+
+    try {
+      await addDoc(collection(db, 'guestbook'), {
+        name, location, message,
+        timestamp: serverTimestamp()
+      });
+      document.getElementById('gb-name').value = '';
+      document.getElementById('gb-location').value = '';
+      document.getElementById('gb-message').value = '';
+      status.textContent = '✓ Thank you for signing!';
+      await loadEntries();
+    } catch (e) {
+      status.textContent = 'Something went wrong. Please try again.';
+    }
+
+    btn.disabled = false;
+  });
+
+  function escapeHtml(str) {
+    return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+              .replace(/"/g,'&quot;').replace(/'/g,'&#039;');
+  }
+
+  loadEntries();
+</script>
+
+</body>
+</html>

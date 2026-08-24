@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juneau — Life After Happily Ever After</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Cinzel:wght@400;600&family=Della+Respira&family=Fondamento&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: #f5efe0;
+      color: #2a1f0e;
+      font-family: 'Della Respira', Georgia, serif;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      padding: 0 1rem 4rem;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 1.5rem;
+      border-bottom: 2px solid #9a6a20;
+      margin-bottom: 2.5rem;
+    }
+
+    .chapter-label {
+      font-family: 'Cinzel', serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.2em;
+      color: #7a3a00;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-family: 'Parisienne', cursive;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      color: #7a3a00;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-family: 'Parisienne', cursive;
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      color: #7a3a00;
+      margin: 2.5rem 0 0.8rem;
+      text-align: center;
+    }
+
+    .content {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    p {
+      margin-bottom: 1.4rem;
+    }
+
+    /* Floated photos */
+    .float-right {
+      float: right;
+      margin: 0 0 1rem 1.6rem;
+      width: 320px;
+    }
+    .float-left {
+      float: left;
+      margin: 0 1.6rem 1rem 0;
+      width: 320px;
+    }
+    .clearfix::after { content: ''; display: table; clear: both; }
+
+    /* Full-width hero */
+    .hero {
+      width: 100%;
+      margin: 1.5rem 0;
+    }
+
+    /* Side-by-side pair */
+    .photo-pair {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 1.5rem 0;
+    }
+    .photo-pair img {
+      flex: 1 1 280px;
+      min-width: 0;
+    }
+
+    /* 3-up grid */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 1.5rem 0;
+    }
+    @media (max-width: 600px) {
+      .photo-grid { grid-template-columns: 1fr; }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+
+    figcaption, .caption {
+      font-family: 'Fondamento', cursive;
+      font-size: 0.82rem;
+      color: #7a3a00;
+      text-align: center;
+      margin-top: 0.4rem;
+      margin-bottom: 0.6rem;
+    }
+
+    figure { margin: 0; }
+
+    /* Video */
+    video {
+      width: 100%;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      margin: 1rem 0 0.4rem;
+    }
+
+    /* Divider */
+    .divider {
+      border: none;
+      border-top: 1px solid #9a6a20;
+      margin: 2.5rem auto;
+      width: 60%;
+      opacity: 0.5;
+    }
+
+    /* Pull quote */
+    blockquote {
+      font-family: 'Fondamento', cursive;
+      font-size: 1.05rem;
+      color: #7a3a00;
+      border-left: 3px solid #9a6a20;
+      padding: 0.5rem 1rem 0.5rem 1.2rem;
+      margin: 1.5rem 0;
+      font-style: italic;
+    }
+
+    /* Footer nav */
+    .footer-nav {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid #9a6a20;
+      font-family: 'Cinzel', serif;
+      font-size: 0.9rem;
+    }
+    .footer-nav a {
+      color: #7a3a00;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+    .footer-nav a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      .float-right, .float-left {
+        float: none;
+        width: 100%;
+        margin: 0 0 1rem 0;
+      }
+    }
+  
+  @media (max-width: 600px) {
+    .chapter-nav, .footer-nav { flex-direction: column; align-items: center; gap: 12px; text-align: center; } .footer-nav a { display: block !important; margin: 0 !important; }
+  }
+</style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6EHHPGDR1N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6EHHPGDR1N');
+  </script>
+</head>
+<body>
+<header>
+  <div class="chapter-label">Chapter Five</div>
+  <h1>Juneau &amp; the Glacier</h1>
+</header>
+
+<div class="content">
+
+  <div class="clearfix">
+    <figure class="float-right">
+      <a href="images/juneau/Juneau.jpeg" target="_blank"><img src="images/juneau/Juneau.jpeg" alt="Juneau from the water"></a>
+      <figcaption>Juneau — the city that can only be reached by sea or air</figcaption>
+    </figure>
+
+    <p>
+      The following day was the biggest day of the cruise — indeed, it may have been the biggest day of the entire adventure. The Charmings had arrived in Juneau, and Snow was celebrating the anniversary of her birth. Prince had been planning a most extraordinary gift, and the day was about to begin.
+    </p>
+
+    <p>
+      Juneau is a peculiar sort of city, reachable only by sea or by air, nestled between glacier-carved mountains and the cold Alaskan waters. It is the kind of place that reminds you how very large and untamed the world truly is — a fitting backdrop for what was to come.
+    </p>
+  </div>
+
+  <hr class="divider">
+  <h2>The Magic Carpet to the Ice</h2>
+
+  <p>
+    Prince had arranged for a magic carpet of a modern kind — a helicopter — to carry Snow up and over those great mountains and set her down upon a living glacier. Not many people can say they have walked upon ancient ice, upon a river of frozen time that has been slowly moving, slowly carving, since before any kingdom existed. Snow Charming was about to become one of them.
+  </p>
+
+  <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin:1.5rem 0;">
+    <figure style="flex:1 1 200px; max-width:320px;">
+      <a href="images/juneau/Helicopter1.jpeg" target="_blank"><img src="images/juneau/Helicopter1.jpeg" alt="The helicopter"></a>
+      <figcaption>The modern magic carpet awaits</figcaption>
+    </figure>
+    <figure style="flex:1 1 200px; max-width:320px;">
+      <a href="images/juneau/Helicopter2.jpeg" target="_blank"><img src="images/juneau/Helicopter2.jpeg" alt="Ready to board"></a>
+      <figcaption>Ready for the sky</figcaption>
+    </figure>
+  </div>
+
+  <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin:1.5rem 0;">
+    <figure style="flex:1 1 200px; max-width:320px;">
+      <a href="images/juneau/Helicopter3.jpeg" target="_blank"><img src="images/juneau/Helicopter3.jpeg" alt="Helicopter cockpit"></a>
+      <figcaption>Prince Charming, aviator</figcaption>
+    </figure>
+    <figure style="flex:1 1 200px; max-width:320px;">
+      <a href="images/juneau/Helicopter4.jpeg" target="_blank"><img src="images/juneau/Helicopter4.jpeg" alt="Helicopter on the glacier"></a>
+      <figcaption>Landed upon the ancient ice</figcaption>
+    </figure>
+  </div>
+
+  <hr class="divider">
+  <h2>Views from Above</h2>
+
+  <p>
+    As the helicopter rose above the city and banked toward the mountains, the world below shrank to something small and manageable. The jagged peaks, the dark forests, the glittering water of the inlet — all of it spread out like a map, like a kingdom seen from the clouds. The Charmings pressed their faces to the glass and could not look away.
+  </p>
+
+  <div class="photo-grid">
+    <figure>
+      <a href="images/juneau/HelicopterView2.jpeg" target="_blank"><img src="images/juneau/HelicopterView2.jpeg" alt="Mountain ridgeline"></a>
+      <figcaption>Mountain ridgelines</figcaption>
+    </figure>
+    <figure>
+      <a href="images/juneau/HelicopterView3.jpeg" target="_blank"><img src="images/juneau/HelicopterView3.jpeg" alt="Glacier from the air"></a>
+      <figcaption>The glacier from above</figcaption>
+    </figure>
+    <figure>
+      <a href="images/juneau/HelicopterView4.jpeg" target="_blank"><img src="images/juneau/HelicopterView4.jpeg" alt="Ice and rock"></a>
+      <figcaption>Ice and ancient stone</figcaption>
+    </figure>
+  </div>
+
+  <div class="photo-grid">
+    <figure>
+      <a href="images/juneau/HelicopterView1.jpeg" target="_blank"><img src="images/juneau/HelicopterView1.jpeg" alt="Aerial view of Juneau"></a>
+      <figcaption>Juneau and the inlet from above</figcaption>
+    </figure>
+    <figure>
+      <a href="images/juneau/HelicopterView5.jpeg" target="_blank"><img src="images/juneau/HelicopterView5.jpeg" alt="Aerial glacier panorama"></a>
+      <figcaption>The glacier stretches into the distance</figcaption>
+    </figure>
+    <figure>
+      <a href="images/juneau/HelicopterView6.jpeg" target="_blank"><img src="images/juneau/HelicopterView6.jpeg" alt="Descent toward the ice"></a>
+      <figcaption>Beginning the descent</figcaption>
+    </figure>
+  </div>
+
+  <hr class="divider">
+  <h2>Upon the Glacier</h2>
+
+  <p>
+    And then they were there. On the ice. The helicopter settled with a gentle crunch of runners on snow, the rotors slowed, and the door opened onto a world of impossible blue and white silence. Snow Charming stepped out and stood upon a glacier that has been forming and flowing for thousands of years, a river of ice moving so slowly it measures its journey in inches per year rather than miles per hour.
+  </p>
+
+  <blockquote>
+    "Hard to describe the glowing blue of the glacial ice — blue only beneath the surface, where light travels through ten thousand years of compression and emerges changed."
+  </blockquote>
+
+  <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin:1.5rem 0;">
+    <figure style="flex:1 1 280px; max-width:320px;">
+      <a href="images/juneau/Glacier4.jpeg" target="_blank"><img src="images/juneau/Glacier4.jpeg" alt="Helicopter on the glacier"></a>
+      <figcaption>The ice with cracks</figcaption>
+    </figure>
+    <figure style="flex:1 1 280px; max-width:320px;">
+      <a href="images/juneau/Glacier1.jpeg" target="_blank"><img src="images/juneau/Glacier1.jpeg" alt="On the glacier"></a>
+      <figcaption>Prince Charming upon the glacier</figcaption>
+    </figure>
+  </div>
+
+  <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin:1.5rem 0;">
+    <figure style="flex:1 1 280px; max-width:320px;">
+      <a href="images/juneau/Glacier2.jpeg" target="_blank"><img src="images/juneau/Glacier2.jpeg" alt="Glacier ice close up"></a>
+      <figcaption>The blue beneath — Snow was beginning to feel it</figcaption>
+    </figure>
+    <figure style="flex:1 1 280px; max-width:320px;">
+      <a href="images/juneau/Glacier3.jpeg" target="_blank"><img src="images/juneau/Glacier3.jpeg" alt="Glacier crevasses"></a>
+      <figcaption>It turns out glaciers are, in fact, quite cold</figcaption>
+    </figure>
+  </div>
+
+  <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin:1.5rem 0;">
+    <figure style="flex:1 1 280px; max-width:320px;">
+      <a href="images/juneau/Glacier5.jpeg" target="_blank"><img src="images/juneau/Glacier5.jpeg" alt="Views across the glacier"></a>
+      <figcaption>The glacier stretches to the horizon</figcaption>
+    </figure>
+    <figure style="flex:1 1 280px; max-width:320px;">
+      <a href="images/juneau/Glacier6.jpeg" target="_blank"><img src="images/juneau/Glacier6.jpeg" alt="Snow Charming on the glacier"></a>
+      <figcaption>A moment worth a thousand words</figcaption>
+    </figure>
+  </div>
+
+  <p>
+    And they captured it all — including a moment of the living glacier itself, the ice and the sky and the silence that is not quite silence:
+  </p>
+
+  <figure style="max-width:400px; margin:1.5rem auto;">
+    <video controls playsinline preload="metadata">
+      <source src="images/juneau/HelicopterViewMovie.mp4" type="video/mp4">
+      Your browser does not support video.
+    </video>
+    <figcaption>The glacier, alive — thirty seconds of ancient ice and Alaskan sky</figcaption>
+  </figure>
+
+  <hr class="divider">
+  <h2>A Royal Birthday Dinner</h2>
+
+  <p>
+    Once the magic carpet ride was over and the Charmings had returned to the warmth of the Nieuw Amsterdam, Prince brought Snow to a dinner worthy of a birthday celebration. Filet mignon. Ribeye. The kind of meal that marks a day as truly special, shared between two people who have been on adventures together for twenty-five years and would not trade a single one.
+  </p>
+
+  <p>
+    This was the birthday of Snow's dreams, and it went very well indeed.
+  </p>
+
+  <div class="photo-pair">
+    <figure>
+      <a href="images/juneau/Dinner1.jpeg" target="_blank"><img src="images/juneau/Dinner1.jpeg" alt="Birthday dinner"></a>
+      <figcaption>Filet and ribeye — a royal feast</figcaption>
+    </figure>
+    <figure>
+      <a href="images/juneau/Dinner2.jpeg" target="_blank"><img src="images/juneau/Dinner2.jpeg" alt="Birthday dinner celebration"></a>
+      <figcaption>Happy birthday, Snow Charming</figcaption>
+    </figure>
+  </div>
+
+</div><!-- .content -->
+
+<div class="content">
+  <nav class="footer-nav">
+    <a href="ketchikan.html">← Ketchikan</a>
+    <a href="index.html">↑ All Chapters</a>
+    <a href="skagway.html">Skagway →</a>
+  </nav>
+</div>
+
+</body>
+</html>

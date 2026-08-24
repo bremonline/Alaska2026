@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Denali — Life After Happily Ever After</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Cinzel:wght@400;600&family=Della+Respira&family=Fondamento&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: #f5efe0;
+      color: #2a1f0e;
+      font-family: 'Della Respira', Georgia, serif;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      padding: 0 1rem 4rem;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 1.5rem;
+      border-bottom: 2px solid #9a6a20;
+      margin-bottom: 2.5rem;
+    }
+
+    .chapter-label {
+      font-family: 'Cinzel', serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.2em;
+      color: #7a3a00;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-family: 'Parisienne', cursive;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      color: #7a3a00;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-family: 'Parisienne', cursive;
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      color: #7a3a00;
+      margin: 2.5rem 0 0.8rem;
+      text-align: center;
+    }
+
+    .content {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    p { margin-bottom: 1.4rem; }
+
+    .float-right {
+      float: right;
+      margin: 0 0 1rem 1.6rem;
+      width: 320px;
+    }
+    .float-left {
+      float: left;
+      margin: 0 1.6rem 1rem 0;
+      width: 320px;
+    }
+    .clearfix::after { content: ''; display: table; clear: both; }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 1.5rem 0;
+    }
+    @media (max-width: 600px) {
+      .photo-grid { grid-template-columns: 1fr; }
+      .float-right, .float-left {
+        float: none;
+        width: 100%;
+        margin: 0 0 1rem 0;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+
+    figcaption {
+      font-family: 'Fondamento', cursive;
+      font-size: 0.82rem;
+      color: #7a3a00;
+      text-align: center;
+      margin-top: 0.4rem;
+      margin-bottom: 0.6rem;
+    }
+
+    figure { margin: 0; }
+
+    blockquote {
+      font-family: 'Fondamento', cursive;
+      font-size: 1.05rem;
+      color: #7a3a00;
+      border-left: 3px solid #9a6a20;
+      padding: 0.5rem 1rem 0.5rem 1.2rem;
+      margin: 1.5rem 0;
+      font-style: italic;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #9a6a20;
+      margin: 2.5rem auto;
+      width: 60%;
+      opacity: 0.5;
+    }
+
+    .footer-nav {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid #9a6a20;
+      font-family: 'Cinzel', serif;
+      font-size: 0.9rem;
+    }
+    .footer-nav a {
+      color: #7a3a00;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+    .footer-nav a:hover { text-decoration: underline; }
+  
+  @media (max-width: 600px) {
+    .chapter-nav, .footer-nav { flex-direction: column; align-items: center; gap: 12px; text-align: center; } .footer-nav a { display: block !important; margin: 0 !important; }
+  }
+</style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6EHHPGDR1N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6EHHPGDR1N');
+  </script>
+</head>
+<body>
+
+<header>
+  <div class="chapter-label">Chapter Eight</div>
+  <h1>Denali</h1>
+</header>
+
+<div class="content">
+
+  <div class="clearfix">
+    <figure class="float-right">
+      <a href="images/denali/McKinleyExplorer.jpeg" target="_blank"><img src="images/denali/McKinleyExplorer.jpeg" alt="The McKinley Explorer train"></a>
+      <figcaption>The McKinley Explorer — built for the journey</figcaption>
+    </figure>
+
+    <p>
+      From Anchorage the Charmings boarded the McKinley Explorer, a glass-domed train built for exactly one purpose: carrying passengers through some of the most spectacular scenery on earth toward the great mountain that Alaskans simply call Denali — the High One. The train ride was long, as the story notes, but no one was complaining.
+    </p>
+
+    <p>
+      The dome cars offered unobstructed views in every direction, and the landscape obliged by being extraordinary for the entire journey.
+    </p>
+  </div>
+
+  <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin:1.5rem 0;">
+    <figure style="flex:1 1 280px; max-width:320px;">
+      <a href="images/denali/BordingMcKinleyExplorer.jpeg" target="_blank"><img src="images/denali/BordingMcKinleyExplorer.jpeg" alt="Boarding the McKinley Explorer"></a>
+      <figcaption>All aboard the McKinley Explorer</figcaption>
+    </figure>
+    <figure style="flex:1 1 280px; max-width:320px;">
+      <a href="images/denali/MckinleyExplorerView.jpeg" target="_blank"><img src="images/denali/MckinleyExplorerView.jpeg" alt="View from the train"></a>
+      <figcaption>The view from the dome car</figcaption>
+    </figure>
+  </div>
+
+  <hr class="divider">
+  <h2>The Blue House</h2>
+
+  <div class="clearfix">
+    <figure class="float-left">
+      <a href="images/denali/HouseOnTheWayToDenali.jpeg" target="_blank"><img src="images/denali/HouseOnTheWayToDenali.jpeg" alt="The blue homestead house"></a>
+      <figcaption>The blue house — still standing, still lived in</figcaption>
+    </figure>
+
+    <p>
+      About halfway to the park, the tour guide pointed out a small blue house sitting alone in the wilderness. It had a story. In the 1960s, a homesteader arrived in this remote stretch of Alaska with his wife and a dream. He promptly left her there — alone, in the wilderness, with little more than a shotgun and a prayer — while he went to earn the money they would need to make a go of it.
+    </p>
+
+    <p>
+      She stayed. She survived. They built a life there, raised a family in the shadow of the greatest mountain on the continent, and eventually passed the house to one of their children, who lives there still. The tour guide also had a story about why the house was painted that particular shade of blue — but that part of the tale has been lost to the miles, as some stories are.
+    </p>
+  </div>
+
+  <hr class="divider">
+  <h2>The Mountain</h2>
+
+  <p>
+    And then there it was. Denali. At 20,310 feet the highest peak in North America, rising so far above its surroundings that it creates its own weather. Most visitors never see the summit — it hides in cloud for the majority of the year. The Charmings were among the fortunate.
+  </p>
+
+  <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin:1.5rem 0;">
+    <figure style="flex:1 1 280px; max-width:320px;">
+      <a href="images/denali/McKinley.jpeg" target="_blank"><img src="images/denali/McKinley.jpeg" alt="Denali"></a>
+      <figcaption>Denali — the High One</figcaption>
+    </figure>
+    <figure style="flex:1 1 280px; max-width:320px;">
+      <a href="images/denali/McKinleyAtSunrise.jpeg" target="_blank"><img src="images/denali/McKinleyAtSunrise.jpeg" alt="Denali at sunrise"></a>
+      <figcaption>Denali at sunrise</figcaption>
+    </figure>
+  </div>
+
+  <hr class="divider">
+  <h2>The Wildlife of Denali</h2>
+
+  <p>
+    The park delivered on every promise. The Charmings spent the day scanning the landscape and were rewarded handsomely — moose, sheep, bears, caribou, and a ptarmigan who seemed entirely unbothered by the attention. In Ketchikan the bears had hidden; here they had no such reluctance.
+  </p>
+
+  <div class="photo-grid">
+    <figure>
+      <a href="images/denali/Bear1.jpeg" target="_blank"><img src="images/denali/Bear1.jpeg" alt="Bear in Denali"></a>
+      <figcaption>Bear — finally</figcaption>
+    </figure>
+    <figure>
+      <a href="images/denali/Bear2.jpeg" target="_blank"><img src="images/denali/Bear2.jpeg" alt="Bear 2"></a>
+      <figcaption>Bear, making no effort to hide</figcaption>
+    </figure>
+    <figure>
+      <a href="images/denali/Bear3.jpeg" target="_blank"><img src="images/denali/Bear3.jpeg" alt="Bear 3"></a>
+      <figcaption>Bear, third appearance</figcaption>
+    </figure>
+  </div>
+
+  <div class="photo-grid">
+    <figure>
+      <a href="images/denali/Moose.jpeg" target="_blank"><img src="images/denali/Moose.jpeg" alt="Moose"></a>
+      <figcaption>A moose, magnificently unbothered</figcaption>
+    </figure>
+    <figure>
+      <a href="images/denali/Sheep.jpeg" target="_blank"><img src="images/denali/Sheep.jpeg" alt="Dall sheep"></a>
+      <figcaption>Dall sheep on the hillside</figcaption>
+    </figure>
+    <figure>
+      <a href="images/denali/Caribou.jpeg" target="_blank"><img src="images/denali/Caribou.jpeg" alt="Caribou"></a>
+      <figcaption>Caribou on the tundra</figcaption>
+    </figure>
+  </div>
+
+  <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin:1.5rem 0;">
+    <figure style="flex:1 1 280px; max-width:320px;">
+      <a href="images/denali/Ptarmigan.jpeg" target="_blank"><img src="images/denali/Ptarmigan.jpeg" alt="Ptarmigan"></a>
+      <figcaption>A ptarmigan — not in the story, but very much present</figcaption>
+    </figure>
+    <figure style="flex:1 1 280px; max-width:320px;">
+      <a href="images/denali/SledDogs.jpeg" target="_blank"><img src="images/denali/SledDogs.jpeg" alt="Sled dogs"></a>
+      <figcaption>The working sled dogs of Denali National Park</figcaption>
+    </figure>
+  </div>
+
+  <p>
+    The sled dogs of Denali Park deserve their own mention. The park keeps a team of roughly thirty dogs — not the lean, wiry sprinters of the Iditarod, but stockier, more powerful animals bred for hauling supplies and conducting rescues through the deep Alaskan winter. When the roads close and the snow piles up and no vehicle can reach the backcountry, these dogs go. They train year-round, and in winter they become the park's lifeline — carrying gear, reaching stranded climbers, doing the work that machines cannot. They were magnificent, and they knew it.
+  </p>
+
+  <p>
+    The day ended at the gold nugget, where wonderful music played and the Charmings sat contentedly, tired in the best possible way. It had been a very long and very full day in the shadow of the highest mountain in North America, and there was nothing left to do but enjoy it.
+  </p>
+
+</div><!-- .content -->
+
+<div class="content">
+  <nav class="footer-nav">
+    <a href="anchorage.html">← Anchorage</a>
+    <a href="index.html">↑ All Chapters</a>
+    <a href="fairbanks.html">Fairbanks →</a>
+  </nav>
+</div>
+
+</body>
+</html>

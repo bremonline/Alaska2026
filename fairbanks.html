@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fairbanks — Life After Happily Ever After</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Cinzel:wght@400;600&family=Della+Respira&family=Fondamento&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: #f5efe0;
+      color: #2a1f0e;
+      font-family: 'Della Respira', Georgia, serif;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      padding: 0 1rem 4rem;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 1.5rem;
+      border-bottom: 2px solid #9a6a20;
+      margin-bottom: 2.5rem;
+    }
+
+    .chapter-label {
+      font-family: 'Cinzel', serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.2em;
+      color: #7a3a00;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-family: 'Parisienne', cursive;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      color: #7a3a00;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-family: 'Parisienne', cursive;
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      color: #7a3a00;
+      margin: 2.5rem 0 0.8rem;
+      text-align: center;
+    }
+
+    h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      color: #7a3a00;
+      margin: 2rem 0 0.6rem;
+      text-transform: uppercase;
+    }
+
+    .content {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    p { margin-bottom: 1.4rem; }
+
+    .float-right {
+      float: right;
+      margin: 0 0 1rem 1.6rem;
+      width: 320px;
+    }
+    .float-left {
+      float: left;
+      margin: 0 1.6rem 1rem 0;
+      width: 320px;
+    }
+    .clearfix::after { content: ''; display: table; clear: both; }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 1.5rem 0;
+    }
+    @media (max-width: 600px) {
+      .photo-grid { grid-template-columns: 1fr; }
+      .float-right, .float-left {
+        float: none;
+        width: 100%;
+        margin: 0 0 1rem 0;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+
+    figcaption {
+      font-family: 'Fondamento', cursive;
+      font-size: 0.82rem;
+      color: #7a3a00;
+      text-align: center;
+      margin-top: 0.4rem;
+      margin-bottom: 0.6rem;
+    }
+
+    figure { margin: 0; }
+
+    blockquote {
+      font-family: 'Fondamento', cursive;
+      font-size: 1.05rem;
+      color: #7a3a00;
+      border-left: 3px solid #9a6a20;
+      padding: 0.5rem 1rem 0.5rem 1.2rem;
+      margin: 1.5rem 0;
+      font-style: italic;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #9a6a20;
+      margin: 2.5rem auto;
+      width: 60%;
+      opacity: 0.5;
+    }
+
+    .footer-nav {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid #9a6a20;
+      font-family: 'Cinzel', serif;
+      font-size: 0.9rem;
+    }
+    .footer-nav a {
+      color: #7a3a00;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+    .footer-nav a:hover { text-decoration: underline; }
+  
+  @media (max-width: 600px) {
+    .chapter-nav, .footer-nav { flex-direction: column; align-items: center; gap: 12px; text-align: center; } .footer-nav a { display: block !important; margin: 0 !important; }
+  }
+</style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6EHHPGDR1N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6EHHPGDR1N');
+  </script>
+</head>
+<body>
+
+<header>
+  <div class="chapter-label">Chapter Nine</div>
+  <h1>Fairbanks</h1>
+</header>
+
+<div class="content">
+
+  <div class="clearfix">
+    <figure class="float-right">
+      <a href="images/fairbanks/Nenana.jpeg" target="_blank"><img src="images/fairbanks/Nenana.jpeg" alt="Nenana"></a>
+      <figcaption>Nenana — a waypoint on the road north</figcaption>
+    </figure>
+
+    <p>
+      The journey to Fairbanks passed through Nenana — a small riverside city with a long history as a supply hub for the Alaskan interior, where the Nenana River meets the Tanana. It is a classic Alaska boom-and-bust story: when the oil pipeline was being built in the 1970s and 80s, Nenana swelled to nearly a thousand residents, drawn by the work and the wages. When the pipeline was finished, most of them left. Today a couple of hundred people remain, holding the place together in the way that small Alaskan towns do — stubbornly, and with no particular apology for their smallness.
+    </p>
+  </div>
+
+  <hr class="divider">
+
+  <div class="clearfix">
+    <figure class="float-left">
+      <a href="images/fairbanks/Fairbanks.jpeg" target="_blank"><img src="images/fairbanks/Fairbanks.jpeg" alt="Fairbanks, Alaska"></a>
+      <figcaption>Fairbanks — the last city at the edge of the world</figcaption>
+    </figure>
+
+    <p>
+      The final day of the adventure brought the Charmings to Fairbanks — the Golden Heart of Alaska, as it is known, and the name is earned twice over. It sits in the geographic middle of the state, and in 1901 gold was discovered there, touching off a rush that put Fairbanks on the map and shaped everything that followed. It sits deep in the interior, just 140 miles south of the Arctic Circle, far from the moderating influence of the sea. In winter it is famous for the northern lights — the aurora blazes over Fairbanks on dark nights with a regularity that draws visitors from around the world. It is also known for cold that reaches sixty below. The Charmings arrived in August, when it was perfectly pleasant, and saw neither aurora nor frostbite. They chose their timing wisely.
+    </p>
+  </div>
+
+  <hr class="divider">
+  <h2>The Riverboat Cruise — Chena River Stop</h2>
+
+  <div class="clearfix">
+    <figure class="float-left">
+      <a href="images/fairbanks/PaddleBoat.jpeg" target="_blank"><img src="images/fairbanks/PaddleBoat.jpeg" alt="The paddleboat on the Chena River"></a>
+      <figcaption>The riverboat on the Chena River</figcaption>
+    </figure>
+
+    <p>
+      The centerpiece of the Fairbanks day was a riverboat cruise on the Chena River — a leisurely float past the riverbanks and their cargo of statues, wildlife, history, and surprises. The boat was the kind of vessel that feels like it belongs to another era, which in many ways it does.
+    </p>
+  </div>
+
+  <h3>Avery &amp; the $35,000 Outfit</h3>
+
+  <p>
+    One of the highlights of the tour was Avery, a guide who demonstrated traditional Alaska Native dress — and casually mentioned that the outfit she was wearing was worth thirty-five thousand dollars. The Charmings listened very carefully after that. A dress that complex and beautiful takes nearly two years to make, every bead and stitch placed by hand. It also happened to be Avery's eighteenth birthday, which she was celebrating by wearing thirty-five thousand dollars worth of traditional regalia and explaining it to tourists on a riverboat. As eighteenth birthdays go, that is a rather good one.
+  </p>
+
+  <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin:1.5rem 0;">
+    <figure style="flex:1 1 280px; max-width:320px;">
+      <a href="images/fairbanks/AveryOutfitFront.jpeg" target="_blank"><img src="images/fairbanks/AveryOutfitFront.jpeg" alt="Avery in traditional outfit - front"></a>
+      <figcaption>Avery — front view of the $35,000 outfit</figcaption>
+    </figure>
+    <figure style="flex:1 1 280px; max-width:320px;">
+      <a href="images/fairbanks/AveryOutfitBack.jpeg" target="_blank"><img src="images/fairbanks/AveryOutfitBack.jpeg" alt="Avery in traditional outfit - back"></a>
+      <figcaption>The back — every bead and stitch accounted for</figcaption>
+    </figure>
+  </div>
+
+  <h3>Reindeer &amp; Iditarod Dogs</h3>
+
+  <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin:1.5rem 0;">
+    <figure style="flex:1 1 280px; max-width:320px;">
+      <a href="images/fairbanks/IditarodSledDogs.jpeg" target="_blank"><img src="images/fairbanks/IditarodSledDogs.jpeg" alt="Iditarod sled dogs"></a>
+      <figcaption>Iditarod dogs — built for speed across a thousand miles</figcaption>
+    </figure>
+    <figure style="flex:1 1 280px; max-width:320px;">
+      <a href="images/fairbanks/Reindeer.jpeg" target="_blank"><img src="images/fairbanks/Reindeer.jpeg" alt="Reindeer"></a>
+      <figcaption>Reindeer — not just for Christmas</figcaption>
+    </figure>
+  </div>
+
+  <p>
+    The tour also introduced the Charmings to reindeer — real ones, not the decorative variety — and to a team of Iditarod sled dogs. Unlike the powerful working dogs of Denali Park, the Iditarod dogs were bred for an entirely different purpose: speed over endurance, lean and quick, made to cover the thousand miles of the great race from Anchorage to Nome. Different dogs for a different kind of wild.
+  </p>
+
+  <h2>The Riverbanks &amp; the Cultural Museum</h2>
+
+  <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin:1.5rem 0;">
+    <figure style="flex:1 1 280px; max-width:320px;">
+      <a href="images/fairbanks/Statue1.jpeg" target="_blank"><img src="images/fairbanks/Statue1.jpeg" alt="Statue on the riverbank"></a>
+      <figcaption>Watching from the bank</figcaption>
+    </figure>
+    <figure style="flex:1 1 280px; max-width:320px;">
+      <a href="images/fairbanks/Statue2.jpeg" target="_blank"><img src="images/fairbanks/Statue2.jpeg" alt="Statue 2 on the riverbank"></a>
+      <figcaption>Another sentinel along the Chena</figcaption>
+    </figure>
+  </div>
+
+  <p>
+    The statues along the riverbank stood sentinel as the boat passed — figures from Alaska's history and culture, rendered in stone and bronze, watching the river go by as they have for years. The cruise also included a stop at the Alaskan Cultural Museum, which turned out to be very good indeed: a thoughtful and well-presented collection of Alaska Native art, history, and tradition that gave the Charmings a much richer sense of the people who have called this land home for thousands of years.
+  </p>
+
+  <hr class="divider">
+  <h2>The Mall</h2>
+
+  <div class="clearfix">
+    <figure class="float-left">
+      <a href="images/fairbanks/MicheleStuffedAnimals.jpeg" target="_blank"><img src="images/fairbanks/MicheleStuffedAnimals.jpeg" alt="Michele with taxidermied animals at the mall"></a>
+      <figcaption>Snow Charming makes new friends at the Fairbanks mall</figcaption>
+    </figure>
+
+    <p>
+      A visit to the local mall revealed one of Fairbanks' more distinctive features — an impressive collection of taxidermied animals on display throughout the shopping center. Bears, wolves, moose, and more, all frozen in dignified poses between the shops. Snow Charming posed for a photograph with the locals, as one does.
+    </p>
+  </div>
+
+  <hr class="divider">
+
+  <p style="text-align:center; font-family:'Fondamento', cursive; font-size:1.1rem; color:#7a3a00; max-width:580px; margin:2rem auto; line-height:2;">
+    And so the adventure came to its end — as all adventures must, eventually. The Charmings flew home from the edge of the world, carrying with them glaciers and bears and sled dogs and one very memorable birthday outfit. Stories end. That is what makes them stories. But the world keeps turning, and there are always more roads, more mountains, more wonders waiting just beyond the next horizon. Twenty-five years of happily ever after — and the story is far from over.
+  </p>
+
+  <p style="text-align:center; margin:2.5rem auto 0; max-width:480px;">
+    <a href="guestbook.html" style="display:inline-block; font-family:'Cinzel', serif; font-size:1rem; color:#f5efe0; background-color:#7a3a00; padding:0.75rem 2rem; border-radius:4px; text-decoration:none; letter-spacing:0.05em;">✒ Sign the Guestbook</a>
+  </p>
+  <p style="text-align:center; font-family:'Fondamento', cursive; font-size:0.95rem; color:#9a6a20; margin:0.75rem auto 0;">
+    If this story moved you, we'd love to hear from you.
+  </p>
+
+</div><!-- .content -->
+
+<div class="content">
+  <nav class="footer-nav">
+    <a href="denali.html">← Denali</a>
+    <a href="index.html">↑ All Chapters</a>
+  </nav>
+</div>
+
+</body>
+</html>

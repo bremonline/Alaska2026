@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life After: 25 Years of Happily Ever After</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Fondamento:ital@0;1&family=Della+Respira&family=Cinzel:wght@400;600&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #f5efe0;
+    color: #2a1f0e;
+    font-family: 'Della Respira', Georgia, serif;
+    min-height: 100vh;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 70px 20px 50px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .crown {
+    font-size: 2.8em;
+    margin-bottom: 16px;
+    line-height: 1;
+  }
+
+  h1 {
+    font-family: 'Parisienne', cursive;
+    font-size: 3em;
+    color: #7a3a00;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    text-shadow: 0 2px 10px rgba(120,60,0,0.15);
+  }
+
+  .subtitle {
+    font-family: 'Cinzel', serif;
+    font-size: 0.95em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #9a6a20;
+    margin-bottom: 30px;
+  }
+
+  .tagline {
+    font-size: 1.1em;
+    line-height: 1.85;
+    color: #4a3a20;
+    font-style: italic;
+    max-width: 580px;
+    margin: 0 auto 20px;
+  }
+
+  .divider {
+    text-align: center;
+    color: #9a6a20;
+    font-size: 1.6em;
+    margin: 30px 0;
+    letter-spacing: 0.5em;
+  }
+
+  /* Table of contents */
+  .toc {
+    max-width: 720px;
+    margin: 0 auto 80px;
+    padding: 0 20px;
+  }
+
+  .toc-title {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85em;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #9a6a20;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .chapter-entry {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    padding: 18px 0;
+    border-bottom: 1px solid #d4c4a0;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.15s;
+  }
+
+  .chapter-entry:first-of-type {
+    border-top: 1px solid #d4c4a0;
+  }
+
+  .chapter-entry:hover .chapter-title {
+    color: #7a3a00;
+    text-decoration: underline;
+  }
+
+  .chapter-num {
+    font-family: 'Cinzel', serif;
+    font-size: 0.78em;
+    color: #9a6a20;
+    letter-spacing: 0.15em;
+    min-width: 90px;
+    text-transform: uppercase;
+  }
+
+  .chapter-info {
+    flex: 1;
+  }
+
+  .chapter-title {
+    font-family: 'Parisienne', cursive;
+    font-size: 1.6em;
+    color: #3a2a10;
+    line-height: 1.2;
+    margin-bottom: 4px;
+    transition: color 0.15s;
+  }
+
+  .chapter-desc {
+    font-size: 0.88em;
+    color: #7a6040;
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  .chapter-dates {
+    font-family: 'Cinzel', serif;
+    font-size: 0.72em;
+    color: #b09060;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+
+  /* Coming soon entries */
+  .chapter-entry.coming-soon {
+    opacity: 0.45;
+    pointer-events: none;
+    cursor: default;
+  }
+
+  .coming-soon .chapter-title {
+    color: #8a7a5a;
+  }
+
+  .coming-tag {
+    font-family: 'Cinzel', serif;
+    font-size: 0.68em;
+    color: #b09060;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-left: 8px;
+  }
+
+  h2.title-line {
+    font-family: 'Parisienne', cursive;
+    font-size: 2.6em;
+    color: #7a3a00;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 10px rgba(120,60,0,0.1);
+  }
+
+  .background {
+    max-width: 720px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+  }
+
+  .background-title {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85em;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #9a6a20;
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  .background p {
+    font-size: 1.05em;
+    line-height: 1.9;
+    color: #2a1f0e;
+    margin-bottom: 1.4em;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 30px 20px 50px;
+    font-size: 0.85em;
+    color: #b09060;
+    font-style: italic;
+  }
+
+  .title-break { display: none; }
+  .title-dash { display: inline; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 2.6em; }
+    .title-break { display: block; }
+    .title-dash { display: none; }
+    .chapter-dates { display: none; }
+    .chapter-num { min-width: 70px; font-size: 0.72em; }
+  }
+
+  @media (max-width: 600px) {
+    .chapter-nav, .footer-nav { flex-direction: column; align-items: center; gap: 12px; text-align: center; }
+  }
+</style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6EHHPGDR1N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6EHHPGDR1N');
+  </script>
+</head>
+<body>
+
+<div class="hero">
+  <div class="crown">👑 ❄️ 👑</div>
+  <div class="subtitle">The Royal Chronicles of Prince &amp; Snow Charming</div>
+  <h1>Life After<span class="title-dash"> — </span><br class="title-break">25 Years After<span class="title-dash"> — </span><br class="title-break">Happily Ever After</h1>
+  <p class="tagline">Once upon a time, a Prince and his Snow Charming celebrated twenty-five years of their happily ever after by sailing to the wild and frozen north — a land of glaciers, whales, and wonder beyond all imagining.</p>
+  <p class="tagline">This is their story.</p>
+</div>
+
+<div class="divider">✦ ✦ ✦</div>
+
+<div class="toc">
+  <div class="toc-title">The Chronicles</div>
+
+  <a class="chapter-entry" href="prelude.html">
+    <div class="chapter-num">Prelude</div>
+    <div class="chapter-info">
+      <div class="chapter-title">Once Upon a Time</div>
+      <div class="chapter-desc">Before the adventure begins — a little background on the Prince, Snow Charming, and twenty-five years of happily ever after.</div>
+    </div>
+    <div class="chapter-dates">The Story So Far</div>
+  </a>
+
+  <a class="chapter-entry" href="seattle.html">
+    <div class="chapter-num">Chapter I</div>
+    <div class="chapter-info">
+      <div class="chapter-title">The Land of Coffee and Glass</div>
+      <div class="chapter-desc">Seattle — where fish fly through the air, a mechanical wizard dispenses destiny, and the sorcerer Chihuly bends light into impossible shapes.</div>
+    </div>
+    <div class="chapter-dates">Aug 6–8, 2026</div>
+  </a>
+
+  <a class="chapter-entry" href="vancouver.html">
+    <div class="chapter-num">Chapter II</div>
+    <div class="chapter-info">
+      <div class="chapter-title">The Gateway to the North</div>
+      <div class="chapter-desc">Vancouver — a gleaming city at the edge of the sea, where the great ship awaited to carry them into the wild.</div>
+    </div>
+    <div class="chapter-dates">Aug 8–9, 2026</div>
+  </a>
+
+  <a class="chapter-entry" href="ketchikan.html">
+    <div class="chapter-num">Chapter III</div>
+    <div class="chapter-info">
+      <div class="chapter-title">The First Port of the Wild</div>
+      <div class="chapter-desc">Ketchikan — rain, totem poles, and the first taste of true Alaska.</div>
+    </div>
+    <div class="chapter-dates">Aug 11, 2026</div>
+  </a>
+
+  <a class="chapter-entry" href="juneau.html">
+    <div class="chapter-num">Chapter IV</div>
+    <div class="chapter-info">
+      <div class="chapter-title">Juneau &amp; the Glacier</div>
+      <div class="chapter-desc">A helicopter ride to ancient ice — and a birthday dinner fit for royalty.</div>
+    </div>
+    <div class="chapter-dates">Aug 12, 2026</div>
+  </a>
+
+  <a class="chapter-entry" href="skagway.html">
+    <div class="chapter-num">Chapter V</div>
+    <div class="chapter-info">
+      <div class="chapter-title">Skagway &amp; the Gold Rush Trail</div>
+      <div class="chapter-desc">A train through the mountains, a cracked world, and an accidental visit to Canada.</div>
+    </div>
+    <div class="chapter-dates">Aug 13, 2026</div>
+  </a>
+
+  <a class="chapter-entry" href="glacierbay.html">
+    <div class="chapter-num">Chapter VI</div>
+    <div class="chapter-info">
+      <div class="chapter-title">Glacier Bay &amp; College Fjord</div>
+      <div class="chapter-desc">Sea otters, calving glaciers, bergy bits, and two days of pure Alaskan wilderness.</div>
+    </div>
+    <div class="chapter-dates">Aug 14–15, 2026</div>
+  </a>
+
+  <a class="chapter-entry" href="anchorage.html">
+    <div class="chapter-num">Chapter VII</div>
+    <div class="chapter-info">
+      <div class="chapter-title">Whittier &amp; Anchorage</div>
+      <div class="chapter-desc">A town in a single building, a train through a mountain, and a turtle named Snappy.</div>
+    </div>
+    <div class="chapter-dates">Aug 16–17, 2026</div>
+  </a>
+
+  <a class="chapter-entry" href="denali.html">
+    <div class="chapter-num">Chapter VIII</div>
+    <div class="chapter-info">
+      <div class="chapter-title">Denali</div>
+      <div class="chapter-desc">Bears, moose, caribou, a blue house with a story, and the High One emerging from the clouds.</div>
+    </div>
+    <div class="chapter-dates">Aug 18–19, 2026</div>
+  </a>
+
+  <a class="chapter-entry" href="fairbanks.html">
+    <div class="chapter-num">Chapter IX</div>
+    <div class="chapter-info">
+      <div class="chapter-title">Fairbanks</div>
+      <div class="chapter-desc">A riverboat on the Chena, a $35,000 outfit, Iditarod dogs, and taxidermied animals at the mall.</div>
+    </div>
+    <div class="chapter-dates">Aug 20–21, 2026</div>
+  </a>
+
+  <a class="chapter-entry" href="guestbook.html">
+    <div class="chapter-num">✍</div>
+    <div class="chapter-info">
+      <div class="chapter-title">Sign the Guestbook</div>
+      <div class="chapter-desc">Leave a note for Prince &amp; Snow Charming.</div>
+    </div>
+  </a>
+
+</div>
+
+<div class="footer">
+  Written in the summer of 2026, on the occasion of their 25th anniversary. ✦ With love, Prince &amp; Snow Charming.
+</div>
+
+</body>
+</html>
